@@ -1,0 +1,4 @@
+# Local build output (main.ts writes the submission here when MAKEFUN_OUTPUT_DIR=out).
+out/
+# Editor and OS leftovers.
+.DS_Store

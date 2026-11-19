@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="The complete offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: cited guides, roadmap to the platinum, missable warnings and a saved checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">Every trophy, every step, every source — the road to the platinum in one offline page.</p>
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-line"><span id="progressText">0 of 55 earned · 0%</span><span id="platinumText">Platinum: Vice Got a Price!</span></div>
+      <div class="progress-bar" role="progressbar" aria-label="Overall trophy progress" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="kind-chips" id="kindChips"></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" data-tab="checklist" id="tab-checklist">Checklist</button>
+  <button type="button" class="tab" data-tab="roadmap" id="tab-roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-tab="missable" id="tab-missable">Missable Timeline</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view active" aria-label="Trophy checklist">
+    <div class="controls">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name, mission or keyword…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side">Side quests</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="crime">Crime &amp; robberies</option>
+          <option value="secrets">Secrets &amp; stunts</option>
+          <option value="completion">100% completion</option>
+          <option value="platinum">Platinum</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sortOrder">
+          <option value="roadmap">Roadmap order</option>
+          <option value="grade">Grade, then name</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="missableOnly"> Missable only</label>
+      <label class="check"><input type="checkbox" id="unearnedOnly"> Not earned yet</label>
+      <label class="check spoiler"><input type="checkbox" id="spoilerHide" checked> Hide story spoilers</label>
+      <span class="spacer"></span>
+      <span class="mini-progress" id="miniProgress" aria-live="polite"></span>
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn" title="Clear all earned ticks and counters">Reset</button>
+    </div>
+    <p class="hint" id="listHint"></p>
+    <ol class="trophy-list" id="trophyList"></ol>
+    <p class="empty" id="emptyMsg" hidden>No trophies match these filters. Clear the search or widen the filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" aria-label="Roadmap to the platinum" hidden>
+    <p class="section-intro">Five stages from the first mission to the platinum. PowerPyx rates the set 4/10 at about 200 hours: 60–80 hours of story, about 100 hours of 100% checklist cleanup, and a final 10 hours of miscellaneous trophies. Work the stages in order — most trophies in a later stage need tools, characters or areas unlocked earlier.</p>
+    <div class="roadmap" id="roadmap"></div>
+  </section>
+
+  <section id="view-missable" class="view" aria-label="Missable timeline" hidden>
+    <p class="section-intro">Only one trophy can be missed, and only in Chapter 1. Everything else stays available after the story in free-roam. There is no mission replay, so keep a manual save at the start and end of every chapter (15 manual slots) as insurance.</p>
+    <div class="timeline" id="timeline"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Names and descriptions are shown as PlayStation publishes them. Guides are written for this page from the sources cited beside each trophy — read the source for full maps and videos. Sources: PowerPyx, GTABase and Push Square (see each trophy). Research checked 20 Nov 2026; two trophies (Bad Luck, I Guess and Ten Pin) still have no confirmed unlock method.</p>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games. Works fully offline — no network requests, progress stays in your browser.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
